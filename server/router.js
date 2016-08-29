@@ -1,7 +1,5 @@
-module.exports = function(app) {
-    app.get('/', function(req, res, next) {
-        res.send(["Hey"]);
-    });
+const Authentication = require('./controllers/authentication.js');
 
+module.exports = function(app) {
     app.post('/users', Authentication.signup);
 }
