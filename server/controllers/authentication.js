@@ -23,7 +23,7 @@ exports.signup = function(req, res, next) {
       if (err) { return next(err); }
 
       if (existingUser) {
-        return res.status(422).send({error: 'Email is in use'});
+        return res.status(422).send({ error: 'Email is in use' });
       }
 
       const user = new User({
